@@ -94,34 +94,48 @@
 
   const app = initializeApp(firebaseConfig);
   const db = getFirestore(app);
+async function fetchNewsEntries() {
+  const container = document.getElementById('entriesContainer');
+  container.innerHTML = '';
 
-  async function fetchNewsEntries() {
-    const container = document.getElementById('entriesContainer');
-    container.innerHTML = '';
+  const snap = await getDocs(collection(db, 'news'));
+  const newsItems = [];
 
-    const snap = await getDocs(collection(db, 'news'));
-    snap.forEach(doc => {
-      const data = doc.data();
-      const title = data.newsTitle; // CORRECT
-const description = data.newsDescription; // CORRECT
-      const caption = data?.caption ?? '';
-      const link = data?.link ?? '';
-      const imageUrl = data?.imageUrl ?? '';
-
-      const div = document.createElement('div');
-      div.className = 'entry-item';
-      div.innerHTML = `
-        <h4>${title}</h4>
-        ${description ? `<p>${description}</p>` : ''}
-        ${caption ? `<p><em>${caption}</em></p>` : ''}
-        ${link ? `<p><a href="${link}" target="_blank">Read more</a></p>` : ''}
-        ${imageUrl ? `<img src="${imageUrl}" alt="${title}">` : ''}
-      `;
-      container.appendChild(div);
+  snap.forEach(doc => {
+    const data = doc.data();
+    newsItems.push({
+      ...data,
+      createdAt: data.createdAt?.toDate?.() || new Date(0), // fallback for old entries
     });
+  });
 
-    setupImageZoomToggle();
-  }
+  // Sort by newest first
+  newsItems.sort((a, b) => b.createdAt - a.createdAt);
+
+  newsItems.forEach(data => {
+    const title = data.newsTitle;
+    const description = data.newsDescription;
+    const caption = data?.caption ?? '';
+    const link = data?.link ?? '';
+    const imageUrl = data?.imageUrl ?? '';
+    const timestamp = data.createdAt.toLocaleString(); // Display readable time
+
+    const div = document.createElement('div');
+    div.className = 'entry-item';
+    div.innerHTML = `
+      <h4>${title}</h4>
+      <small class="text-muted">Posted on: ${timestamp}</small>
+      ${description ? `<p>${description}</p>` : ''}
+      ${caption ? `<p><em>${caption}</em></p>` : ''}
+      ${link ? `<p><a href="${link}" target="_blank">Read more</a></p>` : ''}
+      ${imageUrl ? `<img src="${imageUrl}" alt="${title}">` : ''}
+    `;
+    container.appendChild(div);
+  });
+
+  setupImageZoomToggle();
+}
+  
 
   function setupImageZoomToggle() {
     const images = document.querySelectorAll('.entry-item img');
