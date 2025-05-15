@@ -1,39 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
   <url>
-    <loc>https://honjohanangenoofficialawebsite.netlify.app/</loc>
-    <lastmod>2025-05-13</lastmod>
-    <changefreq>weekly</changefreq>
+    <loc>https://ngongjohanangenoofficialwebsite.netlify.app/</loc>
+    <lastmod>2025-05-15</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
-
   <url>
-    <loc>https://honjohanangenoofficialawebsite.netlify.app/contact</loc>
-    <lastmod>2025-05-13</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://ngongjohanangenoofficialwebsite.netlify.app/news</loc>
+    <lastmod>2025-05-15</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-
   <url>
-    <loc>https://honjohanangenoofficialawebsite.netlify.app/projects</loc>
-    <lastmod>2025-05-13</lastmod>
+    <loc>https://ngongjohanangenoofficialwebsite.netlify.app/admin</loc>
+    <lastmod>2025-05-15</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.3</priority>
   </url>
-
   <url>
-    <loc>https://honjohanangenoofficialawebsite.netlify.app/gallery</loc>
-    <lastmod>2025-05-13</lastmod>
+    <loc>https://ngongjohanangenoofficialwebsite.netlify.app/gallery</loc>
+    <lastmod>2025-05-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://honjohanangenoofficialawebsite.netlify.app/news</loc>
-    <lastmod>2025-05-13</lastmod>
+    <loc>https://ngongjohanangenoofficialwebsite.netlify.app/projects</loc>
+    <lastmod>2025-05-15</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.9</priority>
   </url>
-
 </urlset>
