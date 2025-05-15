@@ -7,6 +7,18 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://ngongjohanangenoofficialwebsite.netlify.app/about</loc>
+    <lastmod>2025-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ngongjohanangenoofficialwebsite.netlify.app/contact</loc>
+    <lastmod>2025-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ngongjohanangenoofficialwebsite.netlify.app/news</loc>
     <lastmod>2025-05-15</lastmod>
     <changefreq>weekly</changefreq>
