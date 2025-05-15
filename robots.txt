@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://johanangenoofficialwebsite.netlify.app/sitemap.xml
+
+Sitemap: https://ngongjohanangenoofficialwebsite.netlify.app/sitemap.xml
