@@ -235,11 +235,69 @@
       </a>
 </div>
 <p class="text-light small mt-3">Created by Bett</p>
+<div class="ad-scroll">
+  <div class="ad-inner">
+    <script async data-cfasync="false" src="//pl28022235.effectivegatecpm.com/9c8cb5d9c57c8f6c0bc5c119a2161fdd/invoke.js"></script>
+    <div id="container-9c8cb5d9c57c8f6c0bc5c119a2161fdd"></div>
+  </div>
+</div>
 
-<script async="async" data-cfasync="false" src="//pl28022235.effectivegatecpm.com/9c8cb5d9c57c8f6c0bc5c119a2161fdd/invoke.js"></script>
-<div id="container-9c8cb5d9c57c8f6c0bc5c119a2161fdd"></div>
+<style>/* Ad container - clean, visible, responsive */
+.ad-scroll {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  background: #f9f9fb;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  margin: 20px 0;
+  height: 130px; /* Optimal for readability */
+  position: relative;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
 
-    
+/* Inner wrapper - smooth infinite scroll */
+.ad-inner {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scrollAd 35s linear infinite;
+  padding-left: 100%; /* Start from right */
+}
+
+/* Let ad render at full native size */
+.ad-inner > div,
+.ad-inner iframe {
+  display: inline-block !important;
+  height: 100%;
+  vertical-align: top;
+  min-width: 300px; /* Prevent collapse */
+}
+
+/* Pause on hover - improves UX */
+.ad-scroll:hover .ad-inner {
+  animation-play-state: paused;
+  cursor: pointer;
+}
+
+/* Smooth scrolling keyframes */
+@keyframes scrollAd {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+/* Optional: Mobile optimization */
+@media (max-width: 768px) {
+  .ad-scroll {
+    height: 230px;
+    border-radius: 8px;
+  }
+  .ad-inner {
+    animation-duration: 28s; /* Slightly faster on mobile */
+  }
+}
+  
+</style>
+
 </div>
 </footer>
 
